@@ -429,7 +429,7 @@
    `type` is expected to be an instance of com.jme3.effect.ParticleMesh$Type, 
    or else one of the keywords `:triangle` or `:point`."
   [name type num-particles]
-  (let [ptype (if (instance? type com.jme3.effect.ParticleMesh$Type)
+  (let [ptype (if (instance? com.jme3.effect.ParticleMesh$Type type)
                 type
                 (case type
                   :triangle com.jme3.effect.ParticleMesh$Type/Triangle
